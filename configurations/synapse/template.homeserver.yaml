@@ -1,4 +1,5 @@
 server_name: {{SYNAPSE_SERVER_NAME}}
+public_baseurl: "https://{{SYNAPSE_SERVER_NAME}}/"
 
 listeners:
   - port: 8008
@@ -6,8 +7,15 @@ listeners:
     x_forwarded: true
     resources:
       - names: [client, federation]
+        compress: true
 
 report_stats: False
+
+admin_api:
+  enabled: true
+
+federation_domain_whitelist: null  # Ermöglicht Kommunikation mit allen Servern
+send_federation: true              # Aktiviert das Senden von Federation-Daten
 
 logging:
   - module: synapse.storage.SQL
