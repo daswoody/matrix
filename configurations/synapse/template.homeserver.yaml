@@ -1,8 +1,10 @@
-server_name: {{SYNAPSE_SERVER_NAME}}
-public_baseurl: "https://{{SYNAPSE_SERVER_NAME}}/"
+server_name: {{SYNAPSE_SERVER_NAME}} # Die Domain ohne das matrix.domain.de. Also nur deine Domain. Das sogt für dafür das Nutzer wie folgt aussehen @user:domain.de statt @user:matrix.domain.de
+public_baseurl: "https://matrix.{{SYNAPSE_SERVER_NAME}}/"
 
 listeners:
   - port: 8008
+    tls: false
+    bind_addresses: ['0.0.0.0']
     type: http
     x_forwarded: true
     resources:
@@ -31,6 +33,14 @@ suppress_key_server_warning: true
 enable_registration: false
 password_config:
   enabled: false
+
+user_directory:
+  enabled: true
+  search_all_users: true
+
+room_directory:
+  enabled: true
+  federation_public_rooms: true
 
 admin_contact: 'mailto:{{ADMIN_EMAIL}}'
 
