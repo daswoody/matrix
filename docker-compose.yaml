@@ -4,7 +4,9 @@ configs:
   nginx_config:
     file: ./configurations/nginx/nginx.conf
   nginx_synapse_client_well_known:
-    file: ./configurations/nginx/index.html
+    file: ./configurations/nginx/client/index.html
+  nginx_synapse_server_well_known:
+    file: ./configurations/nginx/server/index.html
 
   synapse_db_config:
     file: ./configurations/synapse/db.yaml
