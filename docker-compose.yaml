@@ -1,10 +1,10 @@
 version: '3.8'
 
 configs:
-  # nginx_config:
-  #   file: ./configurations/nginx/nginx.conf
-  # nginx_synapse_client_well_known:
-  #   file: ./configurations/nginx/index.html
+  nginx_config:
+    file: ./configurations/nginx/nginx.conf
+  nginx_synapse_client_well_known:
+    file: ./configurations/nginx/index.html
 
   synapse_db_config:
     file: ./configurations/synapse/db.yaml
