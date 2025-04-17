@@ -47,10 +47,16 @@ const templates = [
     outFile: "./configurations/synapse/oidc.yaml",
   },
   {
-    templateFile: "./configurations/nginx/template.well-known.html",
+    templateFile: "./configurations/nginx/template.client.well-known.html",
     // to be mounted in container
     // html/.well-known/matrix/client/index.html
-    outFile: "./configurations/nginx/index.html",
+    outFile: "./configurations/nginx/client/index.html",
+  },
+  {
+    templateFile: "./configurations/nginx/template.server.well-known.html",
+    // to be mounted in container
+    // html/.well-known/matrix/client/index.html
+    outFile: "./configurations/nginx/server/index.html",
   },
 ];
 
