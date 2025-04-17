@@ -95,14 +95,14 @@ services:
     depends_on:
       - postgres-synapse-mas
 
-  # nginx:
-  #  image: nginx:latest
-  #  restart: unless-stopped
-  #  configs:
-  #    - source: nginx_config
-  #      target: /etc/nginx/conf.d/default.conf
-  #    - source: nginx_synapse_client_well_known
-  #      target: /usr/share/nginx/html/.well-known/matrix/client/index.html
+  nginx:
+    image: nginx:latest
+    restart: unless-stopped
+    configs:
+      - source: nginx_config
+        target: /etc/nginx/conf.d/default.conf
+      - source: nginx_synapse_client_well_known
+        target: /usr/share/nginx/html/.well-known/matrix/client/index.html
     #ports:
     #  - "8888:80"
 
