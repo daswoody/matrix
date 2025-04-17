@@ -2,6 +2,7 @@ const fs = require("fs");
 const { getEnv } = require("./utils");
 
 const variables = {
+  SERVER_NAME: setEnv("SERVER_NAME"),
   SYNAPSE_SERVER_NAME: getEnv("SYNAPSE_SERVER_NAME"),
   ADMIN_EMAIL: getEnv("ADMIN_EMAIL"),
   POSTGRES_SYNAPSE_USER: getEnv("POSTGRES_SYNAPSE_USER"),
