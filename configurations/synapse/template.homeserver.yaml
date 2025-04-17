@@ -1,5 +1,5 @@
-server_name: {{SYNAPSE_SERVER_NAME}} # Die Domain ohne das matrix.domain.de. Also nur deine Domain. Das sogt für dafür das Nutzer wie folgt aussehen @user:domain.de statt @user:matrix.domain.de
-public_baseurl: "https://matrix.{{SYNAPSE_SERVER_NAME}}/"
+server_name: {{SERVER_NAME}} # Die Domain ohne das matrix.domain.de. Also nur deine Domain. Das sogt für dafür das Nutzer wie folgt aussehen @user:domain.de statt @user:matrix.domain.de
+public_baseurl: "{{SYNAPSE_SERVER_NAME}}/"
 
 listeners:
   - port: 8008
