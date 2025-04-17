@@ -1,15 +1,14 @@
-server_name: {{SERVER_NAME}} # Die Domain ohne das matrix.domain.de. Also nur deine Domain. Das sogt für dafür das Nutzer wie folgt aussehen @user:domain.de statt @user:matrix.domain.de
-public_baseurl: "{{SYNAPSE_SERVER_NAME}}/"
+server_name: {{SYNAPSE_SERVER_NAME}}
+public_baseurl: "{{SYNAPSE_FQDN}}/"
 
 listeners:
   - port: 8008
     tls: false
-    bind_addresses: ['0.0.0.0']
     type: http
     x_forwarded: true
     resources:
       - names: [client, federation]
-        compress: true
+        compress: false
 
 report_stats: False
 
