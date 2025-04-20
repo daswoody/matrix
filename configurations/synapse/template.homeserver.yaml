@@ -3,12 +3,10 @@ public_baseurl: "{{SYNAPSE_FQDN}}/"
 
 listeners:
   - port: 8008
-    tls: false
     type: http
     x_forwarded: true
     resources:
       - names: [client, federation]
-        compress: false
 
 report_stats: False
 
