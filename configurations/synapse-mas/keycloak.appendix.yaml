@@ -18,28 +18,3 @@ upstream_oauth2:
           action: suggest
           template: "{{ user.email }}"
           set_email_verification: always
-    - id: authentik
-      name: authentik
-      discover: true
-      issuer: "{{AUTHENTIK_FQDN}}/application/o/app-slug/"
-      client_id: "{{AUTHENTIK_CLIENT_ID}}"
-      client_secret: "{{AUTHENTIK_CLIENT_SECRET}}"
-      scopes:
-          - "openid"
-          - "profile"
-          - "email"
-      # user_mapping_provider:
-      #     config:
-      #         localpart_template: "{{ user.preferred_username }}"
-      #         display_name_template: "{{ user.name|capitalize }}"
-      claims_imports:
-        localpart:
-          action: require
-          template: "{{ user.preferred_username }}"
-        displayname:
-          action: suggest
-          template: "{{ user.name }}"
-        email:
-          action: suggest
-          template: "{{ user.email }}"
-          set_email_verification: always
