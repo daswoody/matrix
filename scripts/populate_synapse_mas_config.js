@@ -103,7 +103,7 @@ const replacements = [
     search: "KEYCLOAK_REALM_IDENTIFIER",
     isEnv: true,
   },
-  {
+/*  {
     search: "AUTHENTIK_FQDN",
     isEnv: true,
   },
@@ -114,7 +114,7 @@ const replacements = [
   {
     search: "AUTHENTIK_CLIENT_SECRET",
     isEnv: true,
-  },
+  }, */
   {
     search: `
 passwords:
@@ -127,10 +127,10 @@ passwords:
     search: "KEYCLOAK_UPSTREAM_OAUTH_PROVIDER_ID",
     isEnv: true,
   },
-  {
+/*  {
     search: "AUTHENTIK_UPSTREAM_OAUTH_PROVIDER_ID",
     isEnv: true,
-  },
+  }, */
 ];
 
 function replaceByRegex(text, searchRegex, replaceFunction) {
