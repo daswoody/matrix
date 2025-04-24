@@ -22,8 +22,8 @@ logging:
   - module: synapse.storage.SQL
     level: INFO
 
-use_x_forwarded: true
-bind_addresses: ['0.0.0.0']
+# use_x_forwarded: true
+# bind_addresses: ['0.0.0.0']
 
 trusted_key_servers:
   - server_name: "matrix.org"
