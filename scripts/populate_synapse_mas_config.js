@@ -127,6 +127,10 @@ passwords:
     search: "KEYCLOAK_UPSTREAM_OAUTH_PROVIDER_ID",
     isEnv: true,
   },
+  {
+    search: "AUTHENTIK_UPSTREAM_OAUTH_PROVIDER_ID",
+    isEnv: true,
+  },
 ];
 
 function replaceByRegex(text, searchRegex, replaceFunction) {
