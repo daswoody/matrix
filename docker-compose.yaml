@@ -108,7 +108,7 @@ services:
         target: /usr/share/nginx/html/.well-known/matrix/client/index.html
     ports:
     #  - "80:80"
-      - "443:443"
+    #  - "443:443"
       - "8448:8448"
 
   # pgadmin:
