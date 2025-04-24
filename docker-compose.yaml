@@ -71,9 +71,9 @@ services:
     depends_on:
       - postgres-synapse
       - synapse-mass-authentication-service
-    ports:
-      - "8008:8008"
-      - "8448:8448"
+    #ports:
+    #  - "8008:8008"
+    #  - "8448:8448"
 
   sliding-sync:
     image: ghcr.io/matrix-org/sliding-sync:latest
@@ -106,8 +106,10 @@ services:
         target: /etc/nginx/conf.d/default.conf
       - source: nginx_synapse_client_well_known
         target: /usr/share/nginx/html/.well-known/matrix/client/index.html
-    #ports:
-    #  - "8888:80"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8448:8448"
 
   # pgadmin:
   #   image: dpage/pgadmin4
