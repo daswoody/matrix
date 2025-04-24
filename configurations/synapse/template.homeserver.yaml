@@ -1,6 +1,6 @@
 server_name: {{SYNAPSE_SERVER_NAME}}
 # public_baseurl: "{{SYNAPSE_FQDN}}/"
-public_baseurl: "https://preuss.app"
+public_baseurl: "https://{{SYNAPSE_SERVER_NAME}}"
 
 listeners:
   - port: 8008
