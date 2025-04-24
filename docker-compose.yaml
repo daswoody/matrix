@@ -108,7 +108,7 @@ services:
         target: /usr/share/nginx/client/html/.well-known/matrix/client/index.html
       - source: nginx_synapse_server_well_known
         target: /usr/share/nginx/server/html/.well-known/matrix/server/index.html
-    ports:
+    # ports:
     #  - "80:80"
     #  - "443:8443"
     #  - "8448:8448"
