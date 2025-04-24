@@ -104,6 +104,18 @@ const replacements = [
     isEnv: true,
   },
   {
+    search: "AUTHENTIK_FQDN",
+    isEnv: true,
+  },
+  {
+    search: "AUTHENTIK_CLIENT_ID",
+    isEnv: true,
+  },
+  {
+    search: "AUTHENTIK_CLIENT_SECRET",
+    isEnv: true,
+  },
+  {
     search: `
 passwords:
   enabled: true`,
