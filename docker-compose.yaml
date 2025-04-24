@@ -106,7 +106,7 @@ services:
         target: /etc/nginx/conf.d/default.conf
       - source: nginx_synapse_client_well_known
         target: /usr/share/nginx/client/html/.well-known/matrix/client/index.html
-      - source: nginx_synapse_server_well_known:
+      - source: nginx_synapse_server_well_known
         target: /usr/share/nginx/server/html/.well-known/matrix/server/index.html
     ports:
     #  - "80:80"
