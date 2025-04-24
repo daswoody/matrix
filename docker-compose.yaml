@@ -71,8 +71,8 @@ services:
     depends_on:
       - postgres-synapse
       - synapse-mass-authentication-service
-    #ports:
-    #  - "8008:8008"
+    ports:
+      - "8008:8008"
     #  - "8448:8448"
 
   sliding-sync:
@@ -81,8 +81,8 @@ services:
     depends_on:
       - synapse
       - postgres-sliding-sync
-    #ports:
-    #  - "8009:8009"
+    ports:
+      - "8009:8009"
     environment:
       SYNCV3_SERVER: ${SYNAPSE_FQDN}
       SYNCV3_DB: "host=postgres-sliding-sync sslmode=disable port=5432 dbname=${POSTGRES_SLIDING_SYNC_DB} user=${POSTGRES_SLIDING_SYNC_USER} password=${POSTGRES_SLIDING_SYNC_PASSWORD}"
