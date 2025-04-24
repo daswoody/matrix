@@ -73,7 +73,7 @@ services:
       - synapse-mass-authentication-service
     ports:
       - "8008:8008"
-    #  - "8448:8448"
+      - "8448:8448"
 
   sliding-sync:
     image: ghcr.io/matrix-org/sliding-sync:latest
@@ -111,7 +111,7 @@ services:
     ports:
     #  - "80:80"
     #  - "443:8443"
-      - "8448:8448"
+    #  - "8448:8448"
 
   # pgadmin:
   #   image: dpage/pgadmin4
