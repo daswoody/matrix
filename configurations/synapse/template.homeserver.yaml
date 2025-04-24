@@ -11,6 +11,13 @@ listeners:
     resources:
       - names: [client, federation]
 
+  - port: 8448
+    tls: true
+    bind_addresses: ['::', '0.0.0.0']
+    type: http
+    resources:
+      - names: [federation]
+
 report_stats: False
 
 admin_api:
