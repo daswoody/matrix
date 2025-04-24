@@ -23,7 +23,7 @@ logging:
     level: INFO
 
 use_x_forwarded: true
-bind_addresses: ['127.0.0.1']
+bind_addresses: ['0.0.0.0']
 
 trusted_key_servers:
   - server_name: "matrix.org"
