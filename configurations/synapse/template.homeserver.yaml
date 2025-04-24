@@ -12,7 +12,7 @@ listeners:
       - names: [client, federation]
 
   - port: 8448
-    tls: false
+    tls: true
     bind_addresses: ['::', '0.0.0.0']
     type: http
     resources:
