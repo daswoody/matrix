@@ -71,8 +71,8 @@ services:
     depends_on:
       - postgres-synapse
       - synapse-mass-authentication-service
-    ports:
-      - "8008:8008"
+    #ports:
+    #  - "8008:8008"
     #  - "8448:8448"
 
   sliding-sync:
