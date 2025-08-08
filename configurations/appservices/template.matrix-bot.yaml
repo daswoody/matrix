@@ -8,10 +8,10 @@ rate_limited: false
 namespaces:
   users:
     - exclusive: true
-      regex: "^{{MATRIX_BOT_NAMESPACE_USERS_REGEX}}:{{SYNAPSE_SERVER_NAME}}$"
+      regex: "{{MATRIX_BOT_NAMESPACE_USERS_REGEX}}"
   rooms:
     - exclusive: false
-      regex: "^{{MATRIX_BOT_NAMESPACE_ROOMS_REGEX}}:{{SYNAPSE_SERVER_NAME}}$"
+      regex: "{{MATRIX_BOT_NAMESPACE_ROOMS_REGEX}}"
   aliases:
     - exclusive: false  
-      regex: "^{{MATRIX_BOT_NAMESPACE_ALIASES_REGEX}}:{{SYNAPSE_SERVER_NAME}}$"
+      regex: "{{MATRIX_BOT_NAMESPACE_ALIASES_REGEX}}"
