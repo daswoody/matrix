@@ -8,6 +8,10 @@ rate_limited: false
 namespaces:
   users:
     - exclusive: true
-      regex: "{{MATRIX_BOT_NAMESPACE_REGEX}}"
-  rooms: []
-  aliases: []
+      regex: "{{MATRIX_BOT_NAMESPACE_USERS_REGEX}}"
+  rooms:
+    - exclusive: false
+      regex: "{{MATRIX_BOT_NAMESPACE_ROOMS_REGEX}}"  # Nur lokale Räume
+  aliases:
+    - exclusive: false  
+      regex: "{{MATRIX_BOT_NAMESPACE_ALIASES_REGEX}}"  # Alle lokalen Aliase
