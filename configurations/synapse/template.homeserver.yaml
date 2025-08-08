@@ -42,6 +42,8 @@ room_list:
 
 user_directory_search_enabled: true
 
+registration_shared_secret: {{SYNAPSE_REGISTRATION_SHARED_SECRET}}
+
 experimental_features:
   msc3861:
     enabled: true
