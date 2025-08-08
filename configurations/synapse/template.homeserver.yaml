@@ -26,6 +26,13 @@ password_config:
 
 admin_contact: 'mailto:{{ADMIN_EMAIL}}'
 
+# Application Services Konfiguration
+app_service_config_files:
+  - ./configurations/appservices/n8n-bot.yaml
+  # Hier kannst du später weitere AS hinzufügen:
+  # - /data/appservices/telegram-bridge.yaml
+  # - /data/appservices/discord-bridge.yaml
+
 experimental_features:
   msc3861:
     enabled: true
