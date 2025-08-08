@@ -1,13 +1,13 @@
 # Matrix Bot Application Service
-id: {{MATRIX_BOT_ID}}
-url: {{MATRIX_BOT_URL}}  # oder null falls kein Webhook
-as_token: {{MATRIX_BOT_AS_TOKEN}}  # openssl rand -hex 32
-hs_token: {{MATRIX_BOT_HS_TOKEN}}  # openssl rand -hex 32
-sender_localpart: {{MATRIX_BOT_SENDER_LOCALPART}}
+id: "{{MATRIX_BOT_ID}}"
+url: "{{MATRIX_BOT_URL}}"  # oder null falls kein Webhook
+as_token: "{{MATRIX_BOT_AS_TOKEN}}"  # openssl rand -hex 32
+hs_token: "{{MATRIX_BOT_HS_TOKEN}}"  # openssl rand -hex 32
+sender_localpart: "{{MATRIX_BOT_SENDER_LOCALPART}}"
 rate_limited: false
 namespaces:
   users:
     - exclusive: true
-      regex: {{MATRIX_BOT_NAMESPACE_REGEX}}
+      regex: "{{MATRIX_BOT_NAMESPACE_REGEX}}"
   rooms: []
   aliases: []
