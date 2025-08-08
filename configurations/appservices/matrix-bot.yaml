@@ -1,0 +1,13 @@
+# Matrix Bot Application Service
+id: "n8n_updates_bot"{matrix_bot_id}
+url: "http://deine-n8n-instanz:5678/webhook/matrix"  # oder null falls kein Webhook
+as_token: "dein-sehr-sicheres-as-token-hier-generieren"
+hs_token: "dein-sehr-sicheres-hs-token-hier-generieren"
+sender_localpart: "_n8n_bot"
+rate_limited: false
+namespaces:
+  users:
+    - exclusive: true
+      regex: "@_n8n_.*"
+  rooms: []
+  aliases: []
