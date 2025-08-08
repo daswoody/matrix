@@ -33,6 +33,15 @@ app_service_config_files:
   # - /data/appservices/telegram-bridge.yaml
   # - /data/appservices/discord-bridge.yaml
 
+public_room_list_enabled: true
+
+room_list:
+  include_all_networks: true
+  limit: 200
+  order: "by_room_name"
+
+user_directory_search_enabled: true
+
 experimental_features:
   msc3861:
     enabled: true
