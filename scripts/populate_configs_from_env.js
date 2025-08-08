@@ -54,7 +54,7 @@ const templates = [
   },
   {
     templateFile: "./configurations/appservices/template.matrix-bot.yaml",
-    outFile: "./configurations/appservices/matrix-bot.yaml.yaml",
+    outFile: "./configurations/appservices/matrix-bot.yaml",
   },
   {
     templateFile: "./configurations/nginx/template.well-known.html",
