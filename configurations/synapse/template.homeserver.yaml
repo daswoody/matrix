@@ -3,8 +3,8 @@ server_name: {{SYNAPSE_SERVER_NAME}}
 listeners:
   - port: 8008
     type: http
-    tls: false
-    bind_adresses: ['0.0.0.0']
+    # tls: false
+    # bind_adresses: ['0.0.0.0']
     x_forwarded: true
     resources:
       - names: [client, federation]
