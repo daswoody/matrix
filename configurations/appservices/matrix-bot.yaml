@@ -1,13 +1,13 @@
 # Matrix Bot Application Service
-id: "n8n_updates_bot"{matrix_bot_id}
-url: "http://deine-n8n-instanz:5678/webhook/matrix"  # oder null falls kein Webhook
-as_token: "dein-sehr-sicheres-as-token-hier-generieren"
-hs_token: "dein-sehr-sicheres-hs-token-hier-generieren"
-sender_localpart: "_n8n_bot"
+id: "{{MATRIX_BOT_ID}}"
+url: "{{MATRIX_BOT_URL}}"  # oder null falls kein Webhook
+as_token: "{{MATRIX_BOT_AS_TOKEN}}"  # openssl rand -hex 32
+hs_token: "{{MATRIX_BOT_HS_TOKEN}}"  # openssl rand -hex 32
+sender_localpart: "{{MATRIX_BOT_SENDER_LOCALPART}}"
 rate_limited: false
 namespaces:
   users:
     - exclusive: true
-      regex: "@_n8n_.*"
+      regex: "{{MATRIX_BOT_NAMESPACE_REGEX}}"
   rooms: []
   aliases: []
