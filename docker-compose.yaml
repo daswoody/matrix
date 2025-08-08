@@ -12,6 +12,8 @@ configs:
     file: ./configurations/synapse/email.yaml
   synapse_oidc_config:
     file: ./configurations/synapse/oidc.yaml
+  appservices_config:
+    file: ./configurations/appservices/matrix-bot.yaml
   synapse_homeserver:
     file: ./configurations/synapse/homeserver.yaml
 
@@ -63,6 +65,8 @@ services:
         target: /data/config/oidc.yaml
       - source: synapse_email_config
         target: /data/config/email.yaml
+      - source: appservices_config
+        target: /data/config/matrix-bot.yaml
     volumes:
       - /data/matrix/synapse/data:/data
       - /data/matrix/synapse/media:/media_store
