@@ -28,7 +28,7 @@ admin_contact: 'mailto:{{ADMIN_EMAIL}}'
 
 # Application Services Konfiguration
 app_service_config_files:
-  - /data/appservices/matrix-bot.yaml
+  - /data/config/matrix-bot.yaml
   # Hier kannst du später weitere AS hinzufügen:
   # - /data/appservices/telegram-bridge.yaml
   # - /data/appservices/discord-bridge.yaml
