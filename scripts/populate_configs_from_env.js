@@ -27,6 +27,12 @@ const variables = {
   AUTHENTICATION_ISSUER: getEnv("AUTHENTICATION_ISSUER"),
   SYNAPSE_MAS_SECRET: getEnv("SYNAPSE_MAS_SECRET"),
   SYNAPSE_API_ADMIN_TOKEN: getEnv("SYNAPSE_API_ADMIN_TOKEN"),
+  MATRIX_BOT_ID: getEnv("MATRIX_BOT_ID"),
+  MATRIX_BOT_URL: getEnv("MATRIX_BOT_URL"),
+  MATRIX_BOT_AS_TOKEN: getEnv("MATRIX_BOT_AS_TOKEN"),
+  MATRIX_BOT_HS_TOKEN: getEnv("MATRIX_BOT_HS_TOKEN"),
+  MATRIX_BOT_SENDER_LOCALPART: getEnv("MATRIX_BOT_SENDER_LOCALPARTN"),
+  MATRIX_BOT_NAMESPACE_REGEX: getEnv("MATRIX_BOT_NAMESPACE_REGEX"),
 };
 
 const templates = [
@@ -45,6 +51,10 @@ const templates = [
   {
     templateFile: "./configurations/synapse/template.oidc.yaml",
     outFile: "./configurations/synapse/oidc.yaml",
+  },
+  {
+    templateFile: "./configurations/appservices/template.matrix-bot.yaml",
+    outFile: "./configurations/appservices/matrix-bot.yaml.yaml",
   },
   {
     templateFile: "./configurations/nginx/template.well-known.html",
