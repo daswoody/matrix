@@ -154,3 +154,9 @@ services:
   #     apk add --no-cache bash coreutils && \
   #     echo '0 2 * * * /backup/backup.sh' | crontab - && \
   #     crond -f
+
+networks:
+  matrix:
+    external: true
+  databases:
+    external: true
