@@ -26,7 +26,6 @@ services:
     restart: unless-stopped
     networks:
       - matrix
-      - databases
     environment:
       POSTGRES_DB: ${POSTGRES_SYNAPSE_DB}
       POSTGRES_USER: ${POSTGRES_SYNAPSE_USER}
@@ -39,7 +38,6 @@ services:
     restart: unless-stopped
     networks:
       - matrix
-      - databases
     environment:
       POSTGRES_DB: ${POSTGRES_SLIDING_SYNC_DB}
       POSTGRES_USER: ${POSTGRES_SLIDING_SYNC_USER}
@@ -52,7 +50,6 @@ services:
     restart: unless-stopped
     networks:
       - matrix
-      - databases
     environment:
       POSTGRES_DB: ${POSTGRES_SYNAPSE_MAS_DB}
       POSTGRES_USER: ${POSTGRES_SYNAPSE_MAS_USER}
@@ -157,6 +154,4 @@ services:
 
 networks:
   matrix:
-    external: true
-  databases:
     external: true
