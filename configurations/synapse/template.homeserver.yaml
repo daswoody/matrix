@@ -35,9 +35,14 @@ app_service_config_files:
   # - /data/appservices/telegram-bridge.yaml
   # - /data/appservices/discord-bridge.yaml
 
-matrix_synapse_auto_accept_invites_enabled: true
-matrix_synapse_auto_accept_invites_user_whitelist:
-  - "{{MATRIX_BOT_NAMESPACE_USERS_REGEX}}:{{SYNAPSE_SERVER_NAME}}"
+auto_accept_invites:
+    enabled: true
+    only_for_direct_messages: false
+    only_from_local_users: true
+
+# matrix_synapse_auto_accept_invites_enabled: true
+# matrix_synapse_auto_accept_invites_user_whitelist:
+  # - "{{MATRIX_BOT_NAMESPACE_USERS_REGEX}}:{{SYNAPSE_SERVER_NAME}}"
 # Optional:
 # matrix_synapse_auto_accept_invites_only_for_direct_messages: false
 # matrix_synapse_auto_accept_invites_only_from_local_users: false
